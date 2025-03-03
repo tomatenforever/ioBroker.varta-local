@@ -1,0 +1,53 @@
+{
+	"expert": "yes",
+	"cli": false,
+	"adapterName": "varta-local",
+	"title": "Varta local",
+	"description": "Adapter to fetch data from varta pulse battery",
+	"keywords": [
+		"varta",
+		"battery",
+		"local"
+	],
+	"features": [
+		"adapter"
+	],
+	"adminFeatures": [],
+	"type": "energy",
+	"startMode": "daemon",
+	"connectionType": "local",
+	"dataSource": "poll",
+	"connectionIndicator": "yes",
+	"adapterSettings": [
+		{
+			"key": "hostname",
+			"label": "Hostname",
+			"inputType": "text",
+			"defaultValue": ""
+		},
+		{
+			"key": "interval",
+			"label": "Interval",
+			"inputType": "number",
+			"defaultValue": "30"
+		}
+	],
+	"language": "JavaScript",
+	"nodeVersion": "20",
+	"adminUi": "none",
+	"releaseScript": "yes",
+	"indentation": "Tab",
+	"quotes": "double",
+	"tools": [
+		"ESLint",
+		"type checking"
+	],
+	"authorName": "tomatenforever",
+	"authorGithub": "tomatenforever",
+	"authorEmail": "mathis.plewa@me.com",
+	"gitRemoteProtocol": "HTTPS",
+	"license": "MIT License",
+	"dependabot": "yes",
+	"target": "github",
+	"creatorVersion": "2.6.5"
+}

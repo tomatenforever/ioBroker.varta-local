@@ -1,0 +1,112 @@
+{
+	"common": {
+		"name": "varta-local",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"uk": "Початкова версія",
+				"zh-cn": "首次出版"
+			}
+		},
+		"titleLang": {
+			"en": "Varta local",
+			"de": "Varta local",
+			"ru": "Varta local",
+			"pt": "Varta local",
+			"nl": "Varta local",
+			"fr": "Varta local",
+			"it": "Varta local",
+			"es": "Varta local",
+			"pl": "Varta local",
+			"uk": "Varta local",
+			"zh-cn": "Varta local"
+		},
+		"desc": {
+			"en": "Adapter to fetch data from varta pulse battery",
+			"de": "Adapter to fetch data from varta pulse battery",
+			"ru": "Adapter to fetch data from varta pulse battery",
+			"pt": "Adapter to fetch data from varta pulse battery",
+			"nl": "Adapter to fetch data from varta pulse battery",
+			"fr": "Adapter to fetch data from varta pulse battery",
+			"it": "Adapter to fetch data from varta pulse battery",
+			"es": "Adapter to fetch data from varta pulse battery",
+			"pl": "Adapter to fetch data from varta pulse battery",
+			"uk": "Adapter to fetch data from varta pulse battery",
+			"zh-cn": "Adapter to fetch data from varta pulse battery"
+		},
+		"authors": [
+			"tomatenforever <mathis.plewa@me.com>"
+		],
+		"keywords": [
+			"varta",
+			"battery",
+			"local"
+		],
+		"licenseInformation": {
+			"type": "free",
+			"license": "MIT"
+		},
+		"platform": "Javascript/Node.js",
+		"icon": "varta-local.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/tomatenforever/ioBroker.varta-local/main/admin/varta-local.png",
+		"readme": "https://github.com/tomatenforever/ioBroker.varta-local/blob/main/README.md",
+		"loglevel": "info",
+		"tier": 3,
+		"mode": "daemon",
+		"type": "energy",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "none"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=6.0.11"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": "7.0.23"
+			}
+		]
+	},
+	"native": {
+		"hostname": "",
+		"interval": "30"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
