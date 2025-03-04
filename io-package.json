@@ -108,7 +108,7 @@
 		]
 	},
 	"native": {
-		"hostname": "",
+		"hostname": "10.1.112.243",
 		"interval": "30"
 	},
 	"objects": [],
