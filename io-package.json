@@ -1,8 +1,21 @@
 {
 	"common": {
 		"name": "varta-local",
-		"version": "0.0.1",
+		"version": "0.0.2",
 		"news": {
+			"0.0.2": {
+                "en": "Fixed dependencies",
+                "de": "Abhängigkeiten behoben",
+                "ru": "Исправлены зависимости",
+                "pt": "Dependências corrigidas",
+                "nl": "Vaste afhankelijkheden",
+                "fr": "Dépendances corrigées",
+                "it": "Dipendenze fisse",
+                "es": "Dependencias fijas",
+                "pl": "Naprawione zależności",
+                "uk": "Виправлені залежності",
+                "zh-cn": "修复的依赖项"
+            },
 			"0.0.1": {
 				"en": "initial release",
 				"de": "Erstveröffentlichung",
@@ -77,7 +90,7 @@
 		],
 		"globalDependencies": [
 			{
-				"admin": "7.0.23"
+				"admin": ">=7.0.23"
 			}
 		]
 	},
