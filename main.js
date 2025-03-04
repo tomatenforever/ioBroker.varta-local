@@ -54,13 +54,21 @@ class VartaLocal extends utils.Adapter {
 				type: "boolean",
 				role: "indicator",
 				read: true,
-				write: true,
+				write: false,
 			},
 			native: {},
 		});
 
+		const interval = this.config.interval * 1000; // Convert to milliseconds
+		this.log.info(`Setting up timer with interval: ${interval} ms`);
+
+		this.timer = setInterval(() => {
+			this.log.info("Timer elapsed, performing scheduled task...");
+			// Add your code here to perform the task you want to run on each interval
+		}, interval);
+
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
-		this.subscribeStates("testVariable");
+		// this.subscribeStates("testVariable");
 		// You can also add a subscription for multiple states. The following line watches all states starting with "lights."
 		// this.subscribeStates("lights.*");
 		// Or, if you really must, you can also watch all states. Don't do this if you don't need to. Otherwise this will cause a lot of unnecessary load on the system:
@@ -71,21 +79,21 @@ class VartaLocal extends utils.Adapter {
 			you will notice that each setState will cause the stateChange event to fire (because of above subscribeStates cmd)
 		*/
 		// the variable testVariable is set to true as command (ack=false)
-		await this.setStateAsync("testVariable", true);
+		// await this.setStateAsync("testVariable", true);
 
 		// same thing, but the value is flagged "ack"
 		// ack should be always set to true if the value is received from or acknowledged from the target system
-		await this.setStateAsync("testVariable", { val: true, ack: true });
+		// await this.setStateAsync("testVariable", { val: true, ack: true });
 
 		// same thing, but the state is deleted after 30s (getState will return null afterwards)
-		await this.setStateAsync("testVariable", { val: true, ack: true, expire: 30 });
+		// await this.setStateAsync("testVariable", { val: true, ack: true, expire: 30 });
 
 		// examples for the checkPassword/checkGroup functions
-		let result = await this.checkPasswordAsync("admin", "iobroker");
-		this.log.info("check user admin pw iobroker: " + result);
+		// let result = await this.checkPasswordAsync("admin", "iobroker");
+		// this.log.info("check user admin pw iobroker: " + result);
 
-		result = await this.checkGroupAsync("admin", "admin");
-		this.log.info("check group user admin group admin: " + result);
+		// result = await this.checkGroupAsync("admin", "admin");
+		// this.log.info("check group user admin group admin: " + result);
 	}
 
 	/**
@@ -94,6 +102,10 @@ class VartaLocal extends utils.Adapter {
 	 */
 	onUnload(callback) {
 		try {
+			if (this.timer) {
+				clearInterval(this.timer);
+				this.log.info("Cleared timer on unload");
+			}
 			// Here you must clear all timeouts or intervals that may still be active
 			// clearTimeout(timeout1);
 			// clearTimeout(timeout2);
