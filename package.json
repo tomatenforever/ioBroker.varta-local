@@ -1,6 +1,6 @@
 {
   "name": "iobroker.varta-local",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adapter to fetch data from varta pulse battery",
   "author": {
     "name": "tomatenforever",

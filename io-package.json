@@ -1,8 +1,21 @@
 {
 	"common": {
 		"name": "varta-local",
-		"version": "0.0.2",
+		"version": "0.0.3",
 		"news": {
+			"0.0.3": {
+                "en": "Implement setting configuration",
+                "de": "Einstellungskonfiguration implementieren",
+                "ru": "Реализовать настройку конфигурации",
+                "pt": "Implementar configuração de configuração",
+                "nl": "Instelling configuratie implementeren",
+                "fr": "Implémenter la configuration des paramètres",
+                "it": "Implementare la configurazione delle impostazioni",
+                "es": "Implementar configuración de configuración",
+                "pl": "Wdrożenie konfiguracji ustawień",
+                "uk": "Реалізувати налаштування конфігурації",
+                "zh-cn": "实现设置配置"
+            },
 			"0.0.2": {
                 "en": "Fixed dependencies",
                 "de": "Abhängigkeiten behoben",
@@ -81,7 +94,7 @@
 		"connectionType": "local",
 		"dataSource": "poll",
 		"adminUI": {
-			"config": "none"
+			"config": "admin/index_m.html"
 		},
 		"dependencies": [
 			{

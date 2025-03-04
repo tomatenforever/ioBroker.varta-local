@@ -1,0 +1,31 @@
+// filepath: /c:/Users/mathi/source/repos/ioBroker.varta-local/admin/words.js
+'use strict';
+
+systemDictionary = {
+    "hostname": {
+        "en": "Hostname",
+        "de": "Hostname",
+        "ru": "Имя хоста",
+        "pt": "Nome do host",
+        "nl": "Hostnaam",
+        "fr": "Nom d'hôte",
+        "it": "Nome host",
+        "es": "Nombre de host",
+        "pl": "Nazwa hosta",
+        "uk": "Ім'я хоста",
+        "zh-cn": "主机名"
+    },
+    "interval": {
+        "en": "Interval (seconds)",
+        "de": "Intervall (Sekunden)",
+        "ru": "Интервал (секунды)",
+        "pt": "Intervalo (segundos)",
+        "nl": "Interval (seconden)",
+        "fr": "Intervalle (secondes)",
+        "it": "Intervallo (secondi)",
+        "es": "Intervalo (segundos)",
+        "pl": "Interwał (sekundy)",
+        "uk": "Інтервал (секунди)",
+        "zh-cn": "间隔（秒）"
+    }
+};
