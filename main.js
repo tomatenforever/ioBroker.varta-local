@@ -100,6 +100,8 @@ class VartaLocal extends utils.Adapter {
                         this.setStateAsync(`inverter.${key}`, { val: parseFloat(value), ack: true });
                     }
                 });
+
+				this.setState("info.connection", true, true);
             } catch (error) {
                 this.log.error("Error making web request: " + error);
             }
