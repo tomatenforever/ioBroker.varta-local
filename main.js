@@ -66,7 +66,7 @@ class VartaLocal extends utils.Adapter {
             this.log.info("Timer elapsed, performing scheduled task...");
 
             try {
-                const response = await axios.get(`http://${this.config.hostname}/cgi/ems_data.xml`);
+                const response = await axios.get(`http://10.1.112.243/cgi/ems_data.xml`);
                 const xml = response.data;
 
                 xml2js.parseString(xml, { explicitArray: false }, (err, result) => {
